@@ -12,11 +12,11 @@ class App
 
     private $modules[]
     /**
-     * @param string[] $modules liste des modules à charger
+     * @param string[] $modules list des modules à charger
      */
-    public function __construct(array $modules) {
+    public function __construct(array $modules = []) {
         foreach ($modules as $module){
-            new $module();
+            $this->modules[] = $module();
         }
     }
 
@@ -34,4 +34,3 @@ class App
         return new Response(404, [], '<h1>Erreur 404</h1>');
     }
 }
-

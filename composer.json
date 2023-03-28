@@ -1,14 +1,14 @@
 {
-    "name": "yann/mon-framework",
+    "name": "yann/framework",
     "autoload": {
         "psr-4": {
-            "Framework\\": "src/Framework"
+            "Framework\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Yann-ship-it",
-            "email": "yy.iris85@gmail.com"
+            "name": "Yann",
+            "email": "85126846+Yann-ship-it@users.noreply.github.com"
         }
     ],
     "require-dev": {
@@ -16,7 +16,6 @@
         "squizlabs/php_codesniffer": "^3.7"
     },
     "require": {
-        "guzzlehttp/psr7": "^2.4",
-        "http-interop/response-sender": "^1.0"
+        "guzzlehttp/psr7": "^2.4"
     }
 }
