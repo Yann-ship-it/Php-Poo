@@ -10,6 +10,16 @@ use Psr\Http\Message\ServerRequestInterface;
 class App
 {
 
+    private $modules[]
+    /**
+     * @param string[] $modules liste des modules à charger
+     */
+    public function __construct(array $modules) {
+        foreach ($modules as $module){
+            new $module();
+        }
+    }
+
     public function run(ServerRequestInterface $request): ResponseInterface
     {
         $uri = $request->getUri()->getPath();
@@ -24,3 +34,4 @@ class App
         return new Response(404, [], '<h1>Erreur 404</h1>');
     }
 }
+
