@@ -17,9 +17,9 @@ class RouterTest extends TestCase {
         $this->assertEquals('blog', $route->getCallback());
     }
 
-    public function testGetMethodIfURLDoesNotExists {
+    public function testGetMethodIfURLDoesNotExists() {
         $request = new Request('GET', '/blog');
-        $this->router->get('/blog/{slug:a-z0-9\-]+}-{id:\d+}', function () {return: hello;, 'blog');
+        $this->router->get('/blog/{slug:a-z0-9\-]+}-{id:\d+}', function () {return: 'hello';}, 'blog');
         $route = $this->router->match($request);
         $this->assertEquals('blog', $route->getName());
         $this->assertEquals('blog', $route->getCallback(), ’);
