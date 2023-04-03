@@ -8,6 +8,8 @@ composer require guzzlehttp/psr7
 
 composer require --dev squizlabs/php_codesniffer
 
+composer require zendframework/zend-expressive-fastroute
+
 
 
 ./vendor/bin/phpunit tests/Framework/AppTest.php
