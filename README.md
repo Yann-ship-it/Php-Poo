@@ -6,11 +6,7 @@ composer require --dev phpunit/phpunit
 
 composer require guzzlehttp/psr7
 
-composer require http-interop/response-sender
-
 composer require --dev squizlabs/php_codesniffer
-
-composer require zendframework/zend-expressive-fastroute
 
 
 
